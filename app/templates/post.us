@@ -1,0 +1,29 @@
+<article class="post">
+  <div class="title">
+    <h1><a href="/<%= post.htmlPath() %>"><%= post.title() %></a></h1>
+    <p><%= post.date() %></p>
+  </div>
+  <section>
+    <%= post.content() %>
+  </section>
+  <section class="navigation">
+      <% if(site.newerPost(post)) { %>
+        <span class="newer"><a href="/<%= site.newerPost(post).htmlPath() %>">&#8672;&nbsp;newer</a></span>
+      <% } %>
+      <% if(site.olderPost(post)) { %>
+        <span class="older"><a href="/<%= site.olderPost(post).htmlPath() %>">older&nbsp;&#8674;</a></span>
+      <% } %>
+    </section>
+  <section class="comments">
+    <% if(site.disqus) { %>
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+        window.disqus_identifier="";
+        window.disqus_url="<%= site.url+"/"+post.htmlPath() %>";
+        window.disqus_title="<%= post.title() %>";
+      </script>
+        <script type="text/javascript" src="http://disqus.com/forums/<%= site.disqus %>/embed.js"></script>
+        <noscript><a href="http://<%= site.disqus %>.disqus.com/?url=ref">View the discussion thread.</a></noscript>
+    <% } %>
+  </section>
+</article>

@@ -1,0 +1,19 @@
+{
+  "name": "searls-blog",
+  "title": "An HTML/JS/CSS app",
+  "version": "0.0.1",
+  "private": true,
+  "author": {
+    "name": "John Doe",
+    "company": "ACME, Inc."
+  },
+  "dependencies": {
+    "lineman": "~0.4.6",
+    "grunt-markdown-blog": ">= 0.0.4",
+    "underscore": "~>1.4.4"
+  },
+  "engines": {
+    "node": "~>0.8.20",
+    "npm": "~>1.2.11"
+  }
+}
