@@ -8,8 +8,11 @@
 siteConfig =
   author: "FirstName LastName"
   title: "my lineman blog"
+  description: "where I post all my brilliant ideas"
   url: "http://www.mylinemanblog.com"
   disqus: "my_disqus_name" #<-- just remove or comment this line to disable disqus support
+  rssCount: 10 #<-- remove, comment, or set to zero to disable RSS generation
+
 
 _ = require("underscore")
 lineman = require("lineman")
@@ -38,6 +41,7 @@ module.exports = lineman.config.extend "application"
         posts: "posts"
         index: "index.html"
         archive: "archive.html"
+        rss: "index.xml"
 
     dev:
       dest: "generated"
