@@ -10,8 +10,8 @@ siteConfig =
   title: "my lineman blog"
   description: "where I post all my brilliant ideas"
   url: "http://www.mylinemanblog.com"
-  disqus: "my_disqus_name" #<-- just remove or comment this line to disable disqus support
   rssCount: 10 #<-- remove, comment, or set to zero to disable RSS generation
+  #disqus: "my_disqus_name" #<-- uncomment and set your disqus account name to enable disqus support
 
 
 _ = require("underscore")
