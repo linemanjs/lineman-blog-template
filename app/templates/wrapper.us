@@ -16,7 +16,7 @@
     <%= yield %>
 
     <footer>
-      Copyright <%= site.author %>, <%= new Date().getYear() + 1900 %>.
+      Copyright <%= site.author %>, <%= new Date().getFullYear() %>.
     </footer>
     <script type="text/javascript" src="<%= js %>"></script>
   </body>
