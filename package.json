@@ -8,12 +8,8 @@
     "company": "ACME, Inc."
   },
   "dependencies": {
-    "lineman": "~0.4.10",
+    "lineman": "~>0.6.6",
     "grunt-markdown-blog": ">= 0.0.6",
     "underscore": "~>1.4.4"
-  },
-  "engines": {
-    "node": "~>0.8.20",
-    "npm": "~>1.2.11"
   }
 }

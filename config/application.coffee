@@ -15,7 +15,7 @@ siteConfig =
 
 
 _ = require("underscore")
-lineman = require("lineman")
+lineman = require(process.env['LINEMAN_MAIN'])
 
 # A little function to make it easy to swap named tasks in an array
 replaceTask = (search, replace, type = "common") ->
