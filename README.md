@@ -4,7 +4,7 @@ Turns out that [lineman](http://linemanjs.com) makes a great blogging engine!
 
 ## Getting Started
 
-Here's how to publish a new blog in minutes:
+Here's how to publish a new blog to the web in minutes:
 
 1. Clone into this repository
 2. [Install lineman](https://github.com/testdouble/lineman#getting-started) if you haven't yet.
@@ -13,6 +13,8 @@ Here's how to publish a new blog in minutes:
 5. Commit your post and `git push heroku master`, and your blog is hosted on the web with apache2!
 
 ## Features
+
+First, consider reading about [grunt-markdown-blog](https://github.com/testdouble/grunt-markdown-blog), our grunt task that's doing almost all the heavy lifting here.
 
 * Just add markdown posts with an ".md" extension to `app/posts` and when you `lineman run` or `lineman build`, they'll be rendered.
 * Configure your blog in `config/application.coffee`
