@@ -1,7 +1,12 @@
 <article class="post">
   <div class="title">
     <h1><a href="/<%= post.htmlPath() %>"><%= post.title() %></a></h1>
-    <p><%= post.date() %></p>
+    <p>
+      <%= post.date() %>
+      <% if(post.get('author')) { %>
+        by <%= post.get('author').name %>
+      <% } %>
+    </p>
   </div>
   <section>
     <%= post.content() %>
