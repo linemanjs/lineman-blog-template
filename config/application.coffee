@@ -5,32 +5,16 @@
 # You can find the parent object in: node_modules/lineman/config/application.coffee
 #
 
-siteConfig =
-  author: "FirstName LastName"
-  title: "my lineman blog"
-  description: "where I post all my brilliant ideas"
-  url: "http://www.mylinemanblog.com"
-  rssCount: 10 #<-- remove, comment, or set to zero to disable RSS generation
-  #disqus: "my_disqus_name" #<-- uncomment and set your disqus account name to enable disqus support
-
-
-_ = require("underscore")
-lineman = require(process.env['LINEMAN_MAIN'])
-
-# A little function to make it easy to swap named tasks in an array
-replaceTask = (search, replace, type = "common") ->
-  _(lineman.config.application.appTasks[type]).tap (tasks) ->
-    tasks[_(tasks).indexOf(search)] = replace
-
-module.exports = lineman.config.extend "application",
-
-  # Use grunt-markdown-blog in lieu of Lineman's built-in homepage task
-  appTasks:
-    common: replaceTask("homepage:dev", "markdown:dev", "common")
-    dist: replaceTask("homepage:dist", "markdown:dist", "dist")
+module.exports = require(process.env['LINEMAN_MAIN']).config.extend "application",
 
   markdown:
-    options: _(siteConfig).extend
+    options:
+      author: "FirstName LastName"
+      title: "my lineman blog"
+      description: "where I post all my brilliant ideas"
+      url: "http://www.mylinemanblog.com"
+      rssCount: 10 #<-- remove, comment, or set to zero to disable RSS generation
+      #disqus: "my_disqus_name" #<-- uncomment and set your disqus account name to enable disqus support
       layouts:
         wrapper: "app/templates/wrapper.us"
         index: "app/templates/index.us"
@@ -54,6 +38,14 @@ module.exports = lineman.config.extend "application",
       context:
         js: "../js/app.min.js"
         css: "../css/app.min.css"
+
+  # Use grunt-markdown-blog in lieu of Lineman's built-in homepage task
+  prependTasks:
+    common: "markdown:dev"
+    dist: "markdown:dist"
+  removeTasks:
+    common: "homepage:dev"
+    dist: "homepage:dist"
 
   watch:
     markdown:
