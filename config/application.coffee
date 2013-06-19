@@ -7,6 +7,8 @@
 
 module.exports = require(process.env['LINEMAN_MAIN']).config.extend "application",
 
+  loadNpmTasks: ["grunt-markdown-blog"]
+
   markdown:
     options:
       author: "FirstName LastName"
