@@ -41,13 +41,13 @@ module.exports = require(process.env['LINEMAN_MAIN']).config.extend "application
         js: "../js/app.min.js"
         css: "../css/app.min.css"
 
-  # Use grunt-markdown-blog in lieu of Lineman's built-in homepage task
+  # Use grunt-markdown-blog in lieu of Lineman's built-in pages task
   prependTasks:
     common: "markdown:dev"
     dist: "markdown:dist"
   removeTasks:
-    common: "homepage:dev"
-    dist: "homepage:dist"
+    common: "pages:dev"
+    dist: "pages:dist"
 
   watch:
     markdown:
