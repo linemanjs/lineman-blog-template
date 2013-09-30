@@ -21,6 +21,7 @@ module.exports = require(process.env['LINEMAN_MAIN']).config.extend "application
         wrapper: "app/templates/wrapper.us"
         index: "app/templates/index.us"
         post: "app/templates/post.us"
+        page: "app/templates/page.us"
         archive: "app/templates/archive.us"
       paths:
         posts: "app/posts/*.md"
@@ -51,5 +52,9 @@ module.exports = require(process.env['LINEMAN_MAIN']).config.extend "application
 
   watch:
     markdown:
-      files: ["app/posts/*.md", "app/templates/*.us"]
+      files: ["app/posts/*.md", "app/pages/**/*.md", "app/templates/*.us"]
       tasks: ["markdown:dev"]
+
+    pages:
+      files: []
+      tasks: []

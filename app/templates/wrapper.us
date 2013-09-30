@@ -9,7 +9,7 @@
     <header>
       <h1><%= site.title %></h1>
       <nav>
-        <a href="/">home</a> | <a href="/archive.html">archives</a>
+        <a href="/">home</a> | <a href="/archive.html">archives</a> | <a href="/pages/about.html">about</a>
       </nav>
     </header>
 
