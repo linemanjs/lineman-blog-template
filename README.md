@@ -2,6 +2,8 @@
 
 Turns out that [lineman](http://linemanjs.com) makes a great blogging engine!
 
+Here's [a screencast](https://www.youtube.com/watch?v=raznFJedCZM) to demo usage for Test Double's blog, [Double Takes](http://blog.testdouble.com).
+
 ## Getting Started
 
 Here's how to publish a new blog to the web in minutes:
