@@ -10,9 +10,10 @@ Here's how to publish a new blog to the web in minutes:
 
 1. Clone into this repository
 2. [Install lineman](https://github.com/testdouble/lineman#getting-started) if you haven't yet.
-3. Run `lineman run` while you work on writing markdown files under `app/posts`
-4. Install [heroku](https://toolbelt.heroku.com) if you haven't, then run `heroku create --buildpack http://github.com/testdouble/heroku-buildpack-lineman.git`
-5. Commit your post and `git push heroku master`, and your blog is hosted on the web with apache2!
+3. Run `npm install` to install required project dependencies.
+4. Run `lineman run` while you work on writing markdown files under `app/posts`
+5. Install [heroku](https://toolbelt.heroku.com) if you haven't, then run `heroku create --buildpack http://github.com/testdouble/heroku-buildpack-lineman.git`
+6. Commit your post and `git push heroku master`, and your blog is hosted on the web with apache2!
 
 ## Features
 
