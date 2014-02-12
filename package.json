@@ -1,6 +1,6 @@
 {
   "name": "some-lineman-blog",
-  "title": "An HTML/JS/CSS app",
+  "title": "An HTML/JS/CSS blog with markdown posts",
   "version": "0.0.1",
   "private": true,
   "author": {
@@ -10,5 +10,9 @@
   "dependencies": {
     "lineman": ">= 0.21.3",
     "lineman-blog": ">= 0.0.1"
+  },
+  "scripts": {
+    "start": "lineman run",
+    "test": "lineman spec-ci"
   }
 }
