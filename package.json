@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "lineman": "^0.39.0",
-    "lineman-blog": "^1.2.0"
+    "lineman-blog": "^1.3.0"
   },
   "scripts": {
     "start": "lineman run",
