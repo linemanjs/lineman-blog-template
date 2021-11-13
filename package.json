@@ -8,8 +8,8 @@
     "company": "ACME, Inc."
   },
   "dependencies": {
-    "lineman": ">= 0.21.3",
-    "lineman-blog": ">= 0.0.1"
+    "lineman": "^0.39.0",
+    "lineman-blog": "^1.2.0"
   },
   "scripts": {
     "start": "lineman run",
