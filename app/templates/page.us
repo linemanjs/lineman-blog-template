@@ -1,8 +1,0 @@
-<article class="page">
-  <div class="title">
-    <h1><%= page.title() %></h1>
-  </div>
-  <section>
-    <%= page.content() %>
-  </section>
-</article>

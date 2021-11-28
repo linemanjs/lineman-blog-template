@@ -1,0 +1,19 @@
+article#archive
+
+  - var groups = _(site.getPosts()).chain().clone().groupBy(function(post){
+  -   return post.date().split(' ').slice(-1)
+  - }).value()
+
+  h1
+    a(href='/archive.html' title=`Permanent link to ‘Archive: ${site.title}`)
+      | Archive
+  h6
+  - Object.keys(groups).reverse().forEach(function(year) {
+    h2 #{year}
+    ul
+      - groups[year].reverse().forEach(function(post) {
+        li
+          | #{post.date().split(",")[0]} -&nbsp;
+          a(href=`/${post.htmlPath()}`) #{post.title()}
+      - })
+  - })

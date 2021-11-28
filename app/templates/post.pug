@@ -1,0 +1,23 @@
+article#post
+  h1
+    a(href=`/${post.htmlPath()}` title=`Permanent link to ‘${post.title()}’`)
+      | #{post.title()}
+  time(datetime=post.time())
+    | #{post.date()}
+  - if(post.get('author')) {
+      | &nbsp;by #{post.get('author').name}
+  - }
+  section.content
+    | !{post.content()}
+- if(site.disqus) {
+  section.comments
+    #disqus_thread
+    script
+      | window.disqus_identifier=``;
+      | window.disqus_url=`${site.url}/${post.htmlPath()}`;
+      | window.disqus_title=`${post.title()}`;
+    script(src=`https://disqus.com/forums/${site.disqus}/embed.js`)
+    noscript
+      a(href=`https://${site.disqus}.disqus.com/?url=ref`)
+        View the discussion thread
+- }

@@ -1,0 +1,32 @@
+doctype html
+html(lang="en")
+  head
+    title
+      | #{site.title}
+    link(rel='alternate' type='application/rss+xml' title=`${site.title} - rss feed` href='/index.xml')
+    link(rel='alternate' type='application/json' title=`${site.title} - json feed` href='/index.json')
+    link(rel="stylesheet" type="text/css" media="all" href=`${css}`)
+
+  body
+    header
+      h1
+        | #{site.title}
+      nav
+        ul
+          li
+            a(href='/archive.html') archive
+          li
+            a(href='/') homepage
+        if site.newerPost(post)
+          .newer
+            a(href=`/${site.newerPost(post).htmlPath()}`) &#8672;&nbsp;newer
+        if site.olderPost(post)
+          .older
+            a(href=`/${site.olderPost(post).htmlPath()}`) older&nbsp;&#8674;
+
+    | !{yield}
+
+    footer
+      | &copy; #{new Date().getFullYear()} #{site.author}
+
+    script(type='text/javascript' async src=`${js}`)

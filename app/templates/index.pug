@@ -1,0 +1,7 @@
+article#post
+  h1
+    a(href=`/${post.htmlPath()}` title=`Permanent link to ‘${post.title()}’`)
+      | #{post.title()}
+  time(datetime=post.time())
+    | #{post.date()}
+  | !{post.content()}

@@ -1,0 +1,5 @@
+article#page
+  h1
+    a(href=`/${page.htmlPath()}` title=`Permanent link to ‘${page.title()}’`)
+      | #{page.title()}
+  | !{page.content()}
